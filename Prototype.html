@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+</head>
+<body>
+    <h1>Dice Roller</h1>
+    <label for="numDice">Number of Dice:</label>
+    <select id="numDice">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    <div id="diceResults">
+        <!-- Results will be displayed here -->
+    </div>
+    <button onclick="rollDice()">Roll</button>
+
+    <script>
+        function rollDice() {
+            // Clear previous results
+            document.getElementById("diceResults").innerHTML = "";
+
+            // Get number of dice selected by the user
+            const numDice = document.getElementById("numDice").value;
+
+            // Roll each dice and display the result
+            for (let i = 0; i < numDice; i++) {
+                const result = Math.floor(Math.random() * 6) + 1; // Generating random number between 1 and 6
+                const diceImage = `<img src="${result}.png" alt="Dice ${result}">`;
+                const diceResult = `<div>Dice ${i + 1}: ${diceImage} ${result}</div>`;
+                document.getElementById("diceResults").innerHTML += diceResult;
+            }
+        }
+    </script>
+</body>
+</html>

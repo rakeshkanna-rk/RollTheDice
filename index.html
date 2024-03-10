@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roll The Dice</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dice-roller">
+      <!-- Header -->
+      <div class="header">Roll The Dice</div>
+      
+      <!-- Section for number of dice -->
+      <div class="no-of-dice">
+        <label class="noofdice" for="numDice">Number of Dice:</label>
+        <select class="number" id="numDice">
+            <option class="dice-values" value="1">1</option>
+            <option class="dice-values" value="2">2</option>
+        </select>
+      </div>
+      
+      <!-- Section for displaying dice -->
+      <div class="dice-section">
+        <!-- Individual dice -->
+        <div class="dice" id="dice1">
+          <img class="dice-img" src="Dices/dice6.svg" alt="Dice">
+          <div class="dice-result">
+            <div class="_6">6</div>
+          </div>
+        </div>
+        <div class="dice" id="dice2">
+          <img class="dice-img" src="Dices/dice6.svg" alt="Dice">
+          <div class="dice-result">
+            <div class="_6">6</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Button to roll the dice -->
+      <button class="rollbtn" onclick="rollDice()">Roll Dice</button>
+      
+      <!-- GitHub icon -->
+      <a href="https://github.com/rakeshkanna-rk/RollTheDice" target="_blank">
+      <img class="github-icon" src="github.svg" alt="GitHub Icon">
+      </a>
+      
+      <!-- Background ellipses -->
+      <div class="background-ellipse ellipse-left"></div>
+      <div class="background-ellipse ellipse-right"></div>
+    </div>
+</body>
+</html>
