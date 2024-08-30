@@ -1,0 +1,26 @@
+{
+  "name": "rollthedice",
+  "version": "1.0.0",
+  "description": "This is a simple web-based game where users can roll one or two dice.",
+  "main": "./src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakeshkanna-rk/RollTheDice.git"
+  },
+  "keywords": [
+    "game",
+    "web",
+    "dice-game",
+    "dice",
+    "mini-project"
+  ],
+  "author": "Rakesh Kanna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rakeshkanna-rk/RollTheDice/issues"
+  },
+  "homepage": "https://github.com/rakeshkanna-rk/RollTheDice#readme"
+}

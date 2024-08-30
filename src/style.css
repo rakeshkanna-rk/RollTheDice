@@ -1,0 +1,201 @@
+/* style.css */
+:root{
+    --background: #EEAACC;
+    --color: #800000;
+    --font: "RocknRoll One", sans-serif;
+    --H1: 48px;
+    --H2: 24px;
+    --H3: 18px;
+    --padding-1: 30px 35px; 
+    --padding-2: 15px 35px;
+    --padding-3: 18px 28px;
+    --round-radius: 100px;
+    --ellipse: 350px;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General styling */
+body {
+  font-family: var(--font);
+  color: var(--color);
+}
+
+/* Container for the dice roller */
+.dice-roller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header styling */
+.header {
+  font-size: var(--H1);
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Styling for the section containing number of dice */
+.no-of-dice {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Styling for the number input */
+.number {
+  background: var(--background);
+  font-family: var(--font);
+  font-size: var(--H3);
+  color: var(--color);
+  border: none;
+  outline: none;
+  border-radius: var(--round-radius);
+  padding: var(--padding-3);
+  overflow: hidden;
+}
+
+/* Styling for the dice section */
+.dice-section {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* Styling for individual dice */
+.dice {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the dice image */
+.dice-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styling for the dice result */
+.dice-result {
+  background: var(--background);
+  border-radius: var(--round-radius);
+  padding: var(--padding-2);
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Styling for the GitHub icon */
+.github-icon {
+  width: 40px;
+}
+
+/* Styling for the background ellipses */
+.background-ellipse {
+  z-index: -1;
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(177px);
+}
+
+.ellipse-left {
+    opacity: 0.6;
+    background: var(--color);
+    width: var(--ellipse);
+    height: var(--ellipse);
+    left: -212px;
+    top: 508px;
+    animation: ellipse-move-left 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  }
+  
+  .ellipse-right {
+    opacity: 1;
+    background: var(--background);
+    width: var(--ellipse);
+    height: var(--ellipse);
+    right: -179px;
+    top: 230px;
+    animation: ellipse-move-right 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  }
+  
+  @keyframes ellipse-move-left {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(200px); /* Move right */
+    }
+    40% {
+      transform: translateY(-300px) translateX(200px); /* Move up and right */
+    }
+    60% {
+      transform: translateY(100px) translateX(-100px); /* Move down and left */
+    }
+    80% {
+      transform: translateY(0) translateX(0); /* Return to normal */
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
+  @keyframes ellipse-move-right {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-150px); /* Move left */
+    }
+    40% {
+      transform: translateY(250px) translateX(-150px); /* Move down and left */
+    }
+    60% {
+      transform: translateY(-80px) translateX(100px); /* Move up and right */
+    }
+    80% {
+      transform: translateY(0) translateX(0); /* Return to normal */
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
+
+
+/* Styling for the roll button */
+.rollbtn{
+    background-color: var(--background);
+    color: var(--color);
+    border-radius: var(--round-radius);
+    padding: var(--padding-1);
+    font-family: var(--font);
+    font-size: var(--H3);
+    border: none;
+}
+
+/* Styling for the number of dice label */
+.noofdice{
+    font-family: var(--font);
+    font-size: var(--H3);
+}
+
+/* Styling for the 6 */
+._6{
+    font-size: var(--H2);
+    font-family: var(--font);
+    font-weight: 600;
+    text-align: center;
+}
