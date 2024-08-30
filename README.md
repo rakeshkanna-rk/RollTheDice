@@ -1,7 +1,6 @@
 # Roll the Dice Web Game
 
-[**PLAY GAME**](https://rakeshkanna-rk.github.io/RollTheDice/
-)
+[**PLAY GAME**](./src/)
 
 Welcome to Roll the Dice! This is a simple web-based game where users can roll one or two dice.
 
@@ -21,8 +20,7 @@ Welcome to Roll the Dice! This is a simple web-based game where users can roll o
 
 ## Demo
 
-You can see a live demo of the game [**HERE**](https://rakeshkanna-rk.github.io/RollTheDice/
-).
+You can see a live demo of the game [**HERE**](./src/).
 
 ## Screenshots
 
